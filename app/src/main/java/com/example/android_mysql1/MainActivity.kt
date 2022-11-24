@@ -13,18 +13,18 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 
 class MainActivity : AppCompatActivity() {
+    //crear variables
     private lateinit var etNombre: EditText
     private lateinit var etEmail: EditText
     private lateinit var etTelefeno:EditText
     private lateinit var etPass:EditText
     private lateinit var etId:EditText
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //relacionar variables con los editTextde pantalla
         etNombre = findViewById(R.id.et_RNombre)
         etEmail = findViewById(R.id.et_REmail)
         etTelefeno = findViewById(R.id.et_Rtelefono)
@@ -32,13 +32,13 @@ class MainActivity : AppCompatActivity() {
         etId = findViewById(R.id.et_Id)
 
     }
-
+//Funcion guardar (ocupamos ip de pc)
     fun guardar(Vista: View){
-        val url = "http://192.168.1.3/android_mysql1/insertar.php"
+        val url = "http://192.168.1.242/android_mysql1/insertar.php"
         val procesoEnCola: RequestQueue = Volley.newRequestQueue(this)
         var resultdoPost = object : StringRequest(Request.Method.POST,url,
                 Response.Listener<String> { respuesta->
-                    Toast.makeText(this,"Usuario ingresado",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Usuario Agregado",Toast.LENGTH_LONG).show()
                     etNombre.setText("")
                     etEmail.setText("")
                     etTelefeno.setText("")

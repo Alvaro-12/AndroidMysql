@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:onClick="enviarId"
         android:text="Enviar ID"
         app:layout_constraintStart_toStartOf="parent"
